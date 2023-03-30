@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    /* Primary */
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    /*(main background)*/
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    /*(card background)*/
+    --Soft-violet: hsl(277, 64%, 61%);
+    /*(accent)*/
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    /*(main heading, stats)*/
+    --Slightly-transparent-white-p: hsla(0, 0%, 100%, 0.75);
+    /*(main paragraph)*/
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+    /*(stat headings)*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    background: var(--Very-dark-blue);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    height: 27.5rem;
+    width: 67rem;
+    overflow: hidden;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+.textBox,
+.imageBox {
+    width: 100%;
+    height: 100%;
+}
+
+.textBox {
+    background-color: var(--Dark-desaturated-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.imageBox {
+    position: relative;
+}
+
+.purpleBox,
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.purpleBox {
+    background: hsla(277, 100%, 29%, 0.431);
+    z-index: 1;
+}
+
+h1,
+h2 {
+    color: var(--White);
+}
+
+h1 {
+    font-size: 2rem;
+    width: 22rem;
+}
+
+span {
+    color: var(--Soft-violet);
+}
+
+p {
+    color: var(--Slightly-transparent-white-p);
+    font-size: .9rem;
+    width: 22rem;
+    height: 6rem;
+    font-weight: 400;
+}
+
+.bottom-part {
+    display: flex;
+    margin-top: 1rem;
+    position: relative;
+    gap: 4rem;
+}
+
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--Slightly-transparent-white);
+}
+
+footer {
+    background: var(--Very-dark-blue);
+    height: 5vh;
+}
+
+.attribution {
+    color: var(--White);
+    font-size: 15px;
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--Soft-violet);
+}
+
+@media (max-width: 961px) {
+    main {
+        height: 110vh;
+    }
+
+    .card {
+        height: 45rem;
+        width: 25rem;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .imageBox {
+        height: 35rem;
+        border-top-right-radius: .5rem;
+        border-top-left-radius: .5rem;
+        overflow: hidden;
+    }
+
+    .textBox {
+        border-bottom-right-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+        overflow: hidden;
+    }
+
+    h1,
+    p {
+        width: 74%;
+        text-align: center;
+    }
+
+    .bottom-part {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        height: 10vh;
+    }
+}
+
+@media (max-width: 394px) {
+    .card {
+        height: 60%;
+        width: 90%;
+    }
+
+    main {
+        height: 200vh;
+    }
+
+    .bottom-part {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 0rem;
+    }
+
+    .imageBox {
+        height: 25rem;
+        background: url("../images/image-header-mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    img{
+        display: none;
+    }
+
+    h1,
+    p {
+        text-align: center;
+    }
+}
